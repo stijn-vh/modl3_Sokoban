@@ -11,6 +11,7 @@ namespace Sokoban
         static void Main(string[] args)
         {
             System.Console.WriteLine("hello world");
+            Console.WriteLine("Stijn je zuigt");
             System.Console.ReadLine();
         }
     }
