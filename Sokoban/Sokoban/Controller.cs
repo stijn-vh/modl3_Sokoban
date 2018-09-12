@@ -9,6 +9,6 @@ namespace Sokoban
     {
         private Maze _maze;
         private InputView _inputview;
-        private int _outputview;
+        private OutputView _outputview;
     }
 }

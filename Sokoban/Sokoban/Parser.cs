@@ -7,6 +7,6 @@ namespace Sokoban
 {
     public class Parser
     {
-        private int _maze;
+        private Maze _maze;
     }
 }
