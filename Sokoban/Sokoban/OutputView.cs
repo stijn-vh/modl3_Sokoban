@@ -22,8 +22,6 @@ namespace Sokoban
             Console.WriteLine("|      x: Bestemming           |                         |");
             Console.WriteLine("|      @: Speler               |                         |");
             Console.WriteLine("----------------------------------------------------------");
-
-
         }
     }
 }

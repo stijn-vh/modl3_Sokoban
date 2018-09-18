@@ -22,7 +22,5 @@ namespace Sokoban
         {
             String LevelPath = @"Doolhof\doolhof" + level + ".txt";
         }
-
-       
     }
 }
