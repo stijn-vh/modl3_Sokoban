@@ -10,7 +10,7 @@ namespace Sokoban
     {
         static void Main(string[] args)
         {
-
+            OutputView view = new OutputView();
         }
     }
 }
