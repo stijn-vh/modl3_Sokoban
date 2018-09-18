@@ -10,7 +10,9 @@ namespace Sokoban
     {
         static void Main(string[] args)
         {
-
+            Maze maze = new Maze();
+            Parser pars = new Parser(maze, 3);
+            Controller cont = new Controller(maze);
         }
     }
 }

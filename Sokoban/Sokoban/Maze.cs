@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,19 +8,21 @@ namespace Sokoban
 {
     public class Maze
     {
-        private int _maze;
-        private int _level;
+        private List<Tile> _ItemsInMaze { get; set; }
 
-        public Maze(int level)
+        public Maze()
         {
-            _level = level;
-
-
+            _ItemsInMaze = new List<Tile>();
         }
 
-        public void ReadFile(int level)
+       public void AddLevelObject(int x, int y, char ObjectType)
+       {
+            _ItemsInMaze.Add(new Tile(x, y, ObjectType));
+       }  
+
+        private List<Tile> GetItemInMaze()
         {
-            String LevelPath = @"Doolhof\doolhof" + level + ".txt";
+            return _ItemsInMaze;
         }
     }
 }
