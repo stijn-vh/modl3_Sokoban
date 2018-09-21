@@ -9,6 +9,7 @@ namespace Sokoban
     {
         private int input;
         private string input2;
+
         public void ReadLine()
         {
             Console.WriteLine("Kies een doolhof (1-4), s = stop");

@@ -20,7 +20,7 @@ namespace Sokoban
 
         public void DrawMaze()
         {
-            _outputview.drawView();
+           // _outputview.drawView();
         }
     }
 
