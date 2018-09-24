@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Wall.cs" />
+    <Compile Include="Crate.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="InputView.cs" />
     <Compile Include="Maze.cs" />

@@ -9,6 +9,8 @@ namespace Sokoban
 {
     public class Maze
     {
+        private Tile _tile;
+
         private List<Tile> _ItemsInMaze { get; set; }
 
         public Maze()

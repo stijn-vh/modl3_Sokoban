@@ -11,6 +11,7 @@ namespace Sokoban
         private int _XLocation;
         private int _YLocation;
         private char _char;
+        private int field;
 
         public Tile(int x, int y, char _char)
         {
@@ -22,6 +23,12 @@ namespace Sokoban
         public char getCharacter()
         {
             return _char;
+        }
+
+        public void setCharacter(char _char)
+        {
+            this._char = _char;
+
         }
     }
 }

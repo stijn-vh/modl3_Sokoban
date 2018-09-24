@@ -9,8 +9,8 @@ namespace Sokoban
 {
     public class Player
     {
-        private int x { get; set; }
-        private int y { get; set; }
+        public int x { get; set; }
+        public int y { get; set; }
 
         public Player(int x, int y)
         {
@@ -20,3 +20,4 @@ namespace Sokoban
 
     }
 }
+
