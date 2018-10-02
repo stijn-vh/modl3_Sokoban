@@ -6,17 +6,22 @@ using System.Threading.Tasks;
 
 namespace Sokoban
 {
-    class Tile
+    public class Tile
     {
-        private int _XLocation;
-        private int _YLocation;
         private char _char;
+        public Tile _Up;
+        public Tile _Right;
+        public Tile _Down;
+        public Tile _Left;
 
-        public Tile(int x, int y, char _char)
+
+        public Tile(char _char, Tile Up, Tile Right, Tile Down, Tile Left)
         {
-            _XLocation = x;
-            _YLocation = y;
             this._char = _char;
+            this._Up = Up;
+            this._Right = Right;
+            this._Down = Down;
+            this._Left = Left;
         }
 
         public char getCharacter()

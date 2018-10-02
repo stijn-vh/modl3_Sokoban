@@ -9,22 +9,11 @@ namespace Sokoban
 {
     public class Maze
     {
-        private List<Tile> _ItemsInMaze { get; set; }
 
-        public Maze()
-        {
-            _ItemsInMaze = new List<Tile>();
-        }
-
-       public void AddLevelObject(int x, int y, char ObjectType)
+       public void AddTile(int x, int y, char ObjectType, Tile Up, Tile Right, Tile Down, Tile Left)
        {
-            _ItemsInMaze.Add(new Tile(x, y, ObjectType));
+            new Tile(ObjectType, Up, Right, Down, Left);
        }  
-
-        private List<Tile> GetItemInMaze()
-        {
-            return _ItemsInMaze;
-        }
 
         public void Move()
         {
