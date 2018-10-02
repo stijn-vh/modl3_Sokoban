@@ -13,17 +13,13 @@ namespace Sokoban
         private GameObject tile;
         private Player truck;
         private int countDestination;
+        private Player _player;
 
         public Controller(Maze maze)
         {
             countDestination = 0;
-<<<<<<< Updated upstream
             tile = new GameObject(5, 2, '#');
             truck = new Player(5, 2);
-=======
-            tile = new Tile('#', tile ,tile ,tile ,tile);
-            truck = new Player(tile);
->>>>>>> Stashed changes
             this._maze = maze;
             _outputview = new OutputView();
             DrawMaze();
@@ -38,7 +34,7 @@ namespace Sokoban
         {
             if (!checkCratePushed())
             {
-                if (tile._Right != )
+                if (truck.x + 1 != '#')
                 {
                     Console.WriteLine("You are good to go on x + 1!");
                 }
