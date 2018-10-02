@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sokoban
 {
-    public class Crate : Tile
+    public class Crate : GameObject
     {
     }
 }

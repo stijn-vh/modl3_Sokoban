@@ -10,9 +10,9 @@ namespace Sokoban
     public class Maze
     {
 
-       public void AddTile(int x, int y, char ObjectType, Tile Up, Tile Right, Tile Down, Tile Left)
+       public void AddTile(int x, int y, char ObjectType, GameObject Up, GameObject Right, GameObject Down, GameObject Left)
        {
-            new Tile(ObjectType, Up, Right, Down, Left);
+            new GameObject(ObjectType, Up, Right, Down, Left);
        }  
 
         public void Move()

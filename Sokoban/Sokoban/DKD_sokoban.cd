@@ -30,12 +30,9 @@
   <Class Name="Sokoban.Maze">
     <Position X="6.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAIBAAAAEAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>CAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Maze.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="_tile" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.Parser">
     <Position X="6.25" Y="2.25" Width="1.5" />
@@ -52,13 +49,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Sokoban.Tile">
-    <Position X="8.5" Y="4" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>CACAAAAAAAAIAABAAAAAAAAAAIAAAAAAAIAAAAAAAAA=</HashCode>
-      <FileName>Tile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Crate" Collapsed="true">

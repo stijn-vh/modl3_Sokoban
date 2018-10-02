@@ -32,24 +32,24 @@ namespace Sokoban
                 }
             }
 
-            Tile[,] levelArray = new Tile[width, height];
+            GameObject[,] levelArray = new GameObject[width, height];
             for(int y = 0; y < height; y++) // Full Multidimensional Array
             {
                 for(int x = 0; x < width; x++)
                 {
                     try
                     {
-                        levelArray[x, y] = new Tile(readString[y].ElementAt(x), null, null, null, null);
+                        levelArray[x, y] = new GameObject(readString[y].ElementAt(x), null, null, null, null);
                     }
                     catch
                     {
-                        levelArray[x, y] = new Tile(' ', null, null, null, null);
+                        levelArray[x, y] = new GameObject(' ', null, null, null, null);
                     }
                 }
             } 
 
-            Tile First = null;
-            Tile NewTile = null;
+            GameObject First = null;
+            GameObject NewTile = null;
             for (int y = 0; y < height; y++)
             {
                 for(int x = 0; x < width; x++)
@@ -85,7 +85,7 @@ namespace Sokoban
                     }
                 }
             }
-            Tile current = First;
+            GameObject current = First;
 
             while (current._Down != null)
             {

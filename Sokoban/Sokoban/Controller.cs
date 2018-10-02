@@ -10,7 +10,7 @@ namespace Sokoban
         private Maze _maze;
         private InputView _inputview;
         private OutputView _outputview;
-        private Tile tile;
+        private GameObject tile;
         private Player truck;
         private int countDestination;
         private Player _player;
@@ -18,7 +18,7 @@ namespace Sokoban
         public Controller(Maze maze)
         {
             countDestination = 0;
-            tile = new Tile(5, 2, '#');
+            tile = new GameObject(5, 2, '#');
             truck = new Player(5, 2);
             this._maze = maze;
             _outputview = new OutputView();

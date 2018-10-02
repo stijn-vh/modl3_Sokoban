@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Sokoban
 {
-    public class Tile
+    public class GameObject
     {
         private char _char;
-        public Tile _Up;
-        public Tile _Right;
-        public Tile _Down;
-        public Tile _Left;
+        public GameObject _Up;
+        public GameObject _Right;
+        public GameObject _Down;
+        public GameObject _Left;
 
 
-        public Tile(char _char, Tile Up, Tile Right, Tile Down, Tile Left)
+        public GameObject(char _char, GameObject Up, GameObject Right, GameObject Down, GameObject Left)
         {
             this._char = _char;
             this._Up = Up;

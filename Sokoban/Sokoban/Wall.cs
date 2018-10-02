@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sokoban
 {
-    class Wall : Tile
+    class Wall : GameObject
     {
     }
 }
