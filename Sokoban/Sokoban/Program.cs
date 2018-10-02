@@ -17,6 +17,18 @@ namespace Sokoban
             //OutputView view = new OutputView();
             //InputView view2 = new InputView();
             //view2.ReadLine();
+            //Parser pars = new Parser(maze, 3);
+            //Controller cont = new Controller(maze);
+            OutputView view = new OutputView();
+            InputView view2 = new InputView();
+
+            view2.ReadLine();
+            
+            while (true)
+            {
+                maze.Move();
+
+            }
         }
     }
 }

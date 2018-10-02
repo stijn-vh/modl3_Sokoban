@@ -28,5 +28,11 @@ namespace Sokoban
         {
             return _char;
         }
+
+        public void setCharacter(char _char)
+        {
+            this._char = _char;
+
+        }
     }
 }
