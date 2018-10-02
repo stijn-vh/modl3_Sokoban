@@ -8,18 +8,16 @@ namespace Sokoban
     public class Controller
     {
         private Maze _maze;
-        private InputView _inputview;
         private OutputView _outputview;
         private GameObject tile;
         private Player truck;
         private int countDestination;
-        private Player _player;
 
         public Controller(Maze maze)
         {
             countDestination = 0;
-            tile = new GameObject(5, 2, '#');
-            truck = new Player(5, 2);
+            tile = new GameObject('#', tile,tile,tile,tile);
+            truck = new Player(tile);
             this._maze = maze;
             _outputview = new OutputView();
             DrawMaze();
@@ -34,41 +32,20 @@ namespace Sokoban
         {
             if (!checkCratePushed())
             {
-                if (truck.x + 1 != '#')
+                if (truck.position._Right.getCharacter() != '#')
                 {
                     Console.WriteLine("You are good to go on x + 1!");
                 }
-                if (truck.x - 1 != '#')
+                if (truck.position._Left.getCharacter() != '#')
                 {
                     Console.WriteLine("You are good to go on x - 1!");
 
                 }
-                if (truck.y + 1 != '#')
+                if (truck.position._Up.getCharacter() != '#')
                 {
                     Console.WriteLine("You are good to go on y + 1!");
                 }
-                if (truck.y - 1 != '#')
-                {
-                    Console.WriteLine("You are good to go on y - 1!");
-
-                }
-            }
-            else
-            {
-                if (truck.x + 2 != '#')
-                {
-                    Console.WriteLine("You are good to go on x + 1!");
-                }
-                if (truck.x - 2 != '#')
-                {
-                    Console.WriteLine("You are good to go on x - 1!");
-
-                }
-                if (truck.y + 2 != '#')
-                {
-                    Console.WriteLine("You are good to go on y + 1!");
-                }
-                if (truck.y - 2 != '#')
+                if (truck.position._Down.getCharacter() != '#')
                 {
                     Console.WriteLine("You are good to go on y - 1!");
 
@@ -80,22 +57,22 @@ namespace Sokoban
         {
             if (checkCratePushed())
             {
-                if (truck.x + 1 == 'x')
+                if (truck.position._Right.getCharacter() == 'x')
                 {
                     tile.setCharacter('o');
                     countDestination++;
                 }
-                if (truck.x - 1 == 'x')
+                if (truck.position._Left.getCharacter() == 'x')
                 {
                     tile.setCharacter('o');
                     countDestination++;
                 }
-                if (truck.y + 1 == 'x')
+                if (truck.position._Up.getCharacter() == 'x')
                 {
                     tile.setCharacter('o');
                     countDestination++;
                 }
-                if (truck.y - 1 == 'x')
+                if (truck.position._Down.getCharacter() == 'x')
                 {
                     tile.setCharacter('o');
                     countDestination++;
@@ -106,7 +83,7 @@ namespace Sokoban
 
         public Boolean checkCratePushed()
         {
-            if (truck.x + 1 == 'o' || truck.x - 1 == 'o' || truck.y + 1 == 'o' || truck.y - 1 == 'o')
+            if (truck.position._Right.getCharacter() == 'o' || truck.position._Left.getCharacter() == 'o' || truck.position._Up.getCharacter() == 'o' || truck.position._Down.getCharacter() == 'o')
             {
                 return true;
             }

@@ -9,13 +9,10 @@ namespace Sokoban
 {
     public class Player
     {
-        public int x { get; set; }
-        public int y { get; set; }
-
-        public Player(int x, int y)
+        public GameObject position;
+        public Player(GameObject position)
         {
-            this.x = x;
-            this.y = y;
+            this.position = position;
         }
 
     }
