@@ -9,13 +9,11 @@ namespace Sokoban
 {
     public class Player
     {
-        public int x { get; set; }
-        public int y { get; set; }
+        public Tile Position { get; set; }
 
-        public Player(int x, int y)
+        public Player(Tile position)
         {
-            this.x = x;
-            this.y = y;
+            this.Position = position;
         }
 
     }
