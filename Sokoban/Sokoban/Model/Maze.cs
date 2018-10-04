@@ -9,7 +9,8 @@ namespace Sokoban
 {
     public class Maze
     {
-        private IGameObject First;
+        public IGameObject First { get => first; set => first = null; }
+        private IGameObject first;
         public void Move()
         {
             var keySwitch = Console.ReadKey().Key;
@@ -40,18 +41,16 @@ namespace Sokoban
 
         public void InitMaze(IGameObject[,] levelArray, int width, int height)
         {
-
-            First = null;
             IGameObject NewTile = null;
             for (int y = 0; y < height; y++)
             {
                 for (int x = 0; x < width; x++)
                 {
-                    if (First == null)
+                    if (first == null)
                     {
-                        First = levelArray[0, 0];
-                        First.Right = levelArray[1, 0];
-                        First.Down = levelArray[0, 1];
+                        first = levelArray[0, 0];
+                        first.Right = levelArray[1, 0];
+                        first.Down = levelArray[0, 1];
                     }
                     else
                     {
@@ -78,23 +77,6 @@ namespace Sokoban
                     }
                 }
             }
-            IGameObject current = First;
-
-            while (current.Down != null)
-            {
-                while (current.Right != null)
-                {
-                    //System.Console.Write(current.getCharacter());
-                    current = current.Right;
-                }
-                while (current.Left != null)
-                {
-                    current = current.Left;
-                }
-                System.Console.WriteLine("");
-                current = current.Down;
-            }
-            System.Console.ReadLine();
         }
     }
 }

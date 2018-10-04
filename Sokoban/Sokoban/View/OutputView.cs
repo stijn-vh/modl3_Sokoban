@@ -8,16 +8,6 @@ namespace Sokoban
 {
     public class OutputView
     {
-
-        public void drawView(ArrayList LevelCharacters)
-        {
-            for(int i = 0; i < LevelCharacters.Count; i++)
-            {
-                Console.WriteLine(LevelCharacters[i]);
-            }
-            Console.ReadLine();
-        }
-
         public OutputView()
         {
             Console.WriteLine("----------------------------------------------------------");
@@ -32,6 +22,58 @@ namespace Sokoban
             Console.WriteLine("|      x: Bestemming           |                         |");
             Console.WriteLine("|      @: Speler               |                         |");
             Console.WriteLine("----------------------------------------------------------");
+        }
+
+        public void PrintMaze(IGameObject first)
+        {
+            IGameObject current = first;
+
+            while (current.Down != null) // Loop down the list
+            {
+                while (current.Right != null) // Loop to the last item
+                {
+                    System.Console.Write(GetSymbol(current.GetType().Name));
+                    current = current.Right;
+                }
+                System.Console.Write(GetSymbol(current.GetType().Name));
+                while (current.Left != null) // Loop back to begin
+                {
+                    current = current.Left;
+                }
+                System.Console.WriteLine("");
+                current = current.Down;
+            }
+            while (current.Right != null) // Loop to the last item
+            {
+                System.Console.Write(GetSymbol(current.GetType().Name));
+                current = current.Right;
+            }
+            System.Console.Write(GetSymbol(current.GetType().Name));
+            System.Console.ReadLine();
+        }
+
+        public char GetSymbol(String className)
+        {
+            char symbol = ' ';
+            switch (className)
+            {
+                case "Floor":
+                    symbol = '.';
+                    break;
+                case "Wall":
+                    symbol = '#';
+                    break;
+                case "Crate":
+                    symbol = 'o';
+                    break;
+                case "Player":
+                    symbol = '@';
+                    break;
+                case "Destination":
+                    symbol = 'x';
+                    break;
+            }
+            return symbol;
         }
     }
 }

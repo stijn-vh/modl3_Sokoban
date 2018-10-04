@@ -47,18 +47,18 @@
     <Compile Include="Interfaces\IMoveableGameObject.cs" />
     <Compile Include="Interfaces\INonMoveableGameObject.cs" />
     <Compile Include="Model\Destination.cs" />
+    <Compile Include="Model\Empty.cs" />
     <Compile Include="Model\Floor.cs" />
     <Compile Include="Model\Wall.cs" />
     <Compile Include="Model\Crate.cs" />
     <Compile Include="Model\Player.cs" />
-    <Compile Include="ViewModel\MazeViewModel.cs" />
+    <Compile Include="ViewModel\Controller.cs" />
     <Compile Include="View\InputView.cs" />
     <Compile Include="Model\Maze.cs" />
     <Compile Include="View\OutputView.cs" />
     <Compile Include="ViewModel\Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MoveableGameObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

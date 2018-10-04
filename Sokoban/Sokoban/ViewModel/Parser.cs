@@ -11,14 +11,16 @@ namespace Sokoban
     {
 
         private Maze _maze;
+        private int _level;
         public Parser(Maze maze, int level)
         {
+            _level = level;
             _maze = maze;
         }
 
-        public void ReadFile(int level)
+        public void ReadFile()
         {
-            String LevelPath = @"Doolhof\doolhof" + level + ".txt";
+            String LevelPath = @"Doolhof\doolhof" + _level + ".txt";
 
             String[] readString = System.IO.File.ReadAllLines(LevelPath);
 
@@ -39,7 +41,7 @@ namespace Sokoban
                 {
                     try
                     {
-                        IGameObject tempObject = null;
+                        IGameObject tempObject = new Empty();
                         switch (readString[y].ElementAt(x))
                         {
                             case '.':
@@ -62,7 +64,7 @@ namespace Sokoban
                     }
                     catch
                     {
-                        IGameObject tempObject = null;
+                        IGameObject tempObject = new Empty();
                         levelArray[x, y] = tempObject;
                     }
                 }
