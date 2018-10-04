@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 
@@ -9,6 +10,11 @@ namespace Sokoban
     {
         private int input;
         private string input2;
+
+        public InputView()
+        {
+            
+        }
 
         public void ReadLine()
         {

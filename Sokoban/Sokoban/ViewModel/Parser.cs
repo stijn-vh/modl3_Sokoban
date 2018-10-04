@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Sokoban
 {
-    public class Parser
+    public class Parser 
     {
 
         private Maze _maze;

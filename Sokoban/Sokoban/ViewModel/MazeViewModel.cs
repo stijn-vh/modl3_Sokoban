@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 
 namespace Sokoban
 {
-    public class Controller
+    public class MazeViewModel
     {
         private Maze _maze;
         private OutputView _outputview;
@@ -13,14 +14,18 @@ namespace Sokoban
         private Player truck;
         private int countDestination;
 
-        public Controller(Maze maze)
+        private ObservableCollection<Maze> maze { get; set; }
+
+        public MazeViewModel(Maze maze)
         {
-            countDestination = 0;
-            tile = new MoveableGameObject('#', tile,tile,tile,tile);
-            truck = new Player(tile);
-            this._maze = maze;
-            _outputview = new OutputView();
-            DrawMaze();
+            this.maze = maze;
+
+            //countDestination = 0;
+            //tile = new MoveableGameObject('#', tile,tile,tile,tile);
+            //truck = new Player(tile);
+            //this._maze = maze;
+            //_outputview = new OutputView();
+            //DrawMaze();
         }
 
         public void DrawMaze()

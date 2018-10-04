@@ -9,6 +9,7 @@ namespace Sokoban
 {
     public class Maze
     {
+        private IGameObject First;
         public void Move()
         {
             var keySwitch = Console.ReadKey().Key;
@@ -40,7 +41,7 @@ namespace Sokoban
         public void InitMaze(IGameObject[,] levelArray, int width, int height)
         {
 
-            IGameObject First = null;
+            First = null;
             IGameObject NewTile = null;
             for (int y = 0; y < height; y++)
             {
