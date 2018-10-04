@@ -4,41 +4,39 @@
     <Position X="1.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
-      <FileName>InputView.cs</FileName>
+      <FileName>View\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.OutputView" Collapsed="true">
     <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>OutputView.cs</FileName>
+      <FileName>View\OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Controller">
     <Position X="3.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAABAAAAAAAAAABAAAAIiAAAAIAAAAEAgQAABAAAAAA=</HashCode>
-      <FileName>Controller.cs</FileName>
+      <HashCode>AAABAAAAAAAAAABAAAAIgAAAAIAAAAEAgQAABAAAAAA=</HashCode>
+      <FileName>ViewModel\Controller.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="_maze" />
-      <Field Name="_inputview" />
       <Field Name="_outputview" />
-      <Field Name="_player" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.Maze">
     <Position X="6.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Maze.cs</FileName>
+      <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Parser">
     <Position X="6.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Parser.cs</FileName>
+      <FileName>ViewModel\Parser.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="_maze" />
@@ -47,22 +45,22 @@
   <Class Name="Sokoban.Player" Collapsed="true">
     <Position X="0.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
-      <FileName>Player.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Crate" Collapsed="true">
     <Position X="10.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Crate.cs</FileName>
+      <FileName>Model\Crate.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Wall" Collapsed="true">
     <Position X="10.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Wall.cs</FileName>
+      <FileName>Model\Wall.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

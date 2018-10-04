@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sokoban.Model;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,6 @@ namespace Sokoban
     {
 
         private Maze _maze;
-
         public Parser(Maze maze, int level)
         {
             _maze = maze;
@@ -32,24 +32,44 @@ namespace Sokoban
                 }
             }
 
-            GameObject[,] levelArray = new GameObject[width, height];
+            IGameObject[,] levelArray = new IGameObject[width, height];
             for(int y = 0; y < height; y++) // Full Multidimensional Array
             {
                 for(int x = 0; x < width; x++)
                 {
                     try
                     {
-                        levelArray[x, y] = new GameObject(readString[y].ElementAt(x), null, null, null, null);
+                        IGameObject tempObject = null;
+                        switch (readString[y].ElementAt(x))
+                        {
+                            case '.':
+                                tempObject = new Floor();
+                                break;
+                            case '#':
+                                tempObject = new Wall();
+                                break;
+                            case 'o':
+                                tempObject = new Crate();
+                                break;
+                            case 'x':
+                                tempObject = new Destination();
+                                break;
+                            case '@':
+                                tempObject = new Player();
+                                break;
+                        }
+                        levelArray[x, y] = tempObject;
                     }
                     catch
                     {
-                        levelArray[x, y] = new GameObject(' ', null, null, null, null);
+                        IGameObject tempObject = null;
+                        levelArray[x, y] = tempObject;
                     }
                 }
             } 
 
-            GameObject First = null;
-            GameObject NewTile = null;
+            IGameObject First = null;
+            IGameObject NewTile = null;
             for (int y = 0; y < height; y++)
             {
                 for(int x = 0; x < width; x++)
@@ -57,49 +77,49 @@ namespace Sokoban
                     if(First == null)
                     {
                         First = levelArray[0, 0];
-                        First._Right = levelArray[1, 0];
-                        First._Down = levelArray[0, 1];
+                        First.Right = levelArray[1, 0];
+                        First.Down = levelArray[0, 1];
                     }
                     else
                     {
                         NewTile =  levelArray[x, y];
                         if(y - 1 >= 0)
                         {
-                            NewTile._Up = levelArray[x, y - 1];
+                            NewTile.Up = levelArray[x, y - 1];
                         }
 
                         if(x + 1 < width)
                         {
-                            NewTile._Right = levelArray[x + 1, y];
+                            NewTile.Right = levelArray[x + 1, y];
                         }
 
                         if(y + 1 < height)
                         {
-                            NewTile._Down = levelArray[x, y + 1];
+                            NewTile.Down = levelArray[x, y + 1];
                         }
 
                         if(x - 1 >= 0)
                         {
-                            NewTile._Left = levelArray[x - 1, y];
+                            NewTile.Left = levelArray[x - 1, y];
                         }
                     }
                 }
             }
-            GameObject current = First;
+            IGameObject current = First;
 
-            while (current._Down != null)
+            while (current.Down != null)
             {
-                while (current._Right != null)
+                while (current.Right != null)
                 {
-                    System.Console.Write(current.getCharacter());
-                    current = current._Right;
+                    //System.Console.Write(current.getCharacter());
+                    current = current.Right;
                 }
-                while(current._Left != null)
+                while(current.Left != null)
                 {
-                    current = current._Left;
+                    current = current.Left;
                 }
                 System.Console.WriteLine("");
-                current = current._Down;
+                current = current.Down;
             }
             System.Console.ReadLine();
         }

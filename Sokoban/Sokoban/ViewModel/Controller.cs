@@ -9,14 +9,14 @@ namespace Sokoban
     {
         private Maze _maze;
         private OutputView _outputview;
-        private GameObject tile;
+        private MoveableGameObject tile;
         private Player truck;
         private int countDestination;
 
         public Controller(Maze maze)
         {
             countDestination = 0;
-            tile = new GameObject('#', tile,tile,tile,tile);
+            tile = new MoveableGameObject('#', tile,tile,tile,tile);
             truck = new Player(tile);
             this._maze = maze;
             _outputview = new OutputView();

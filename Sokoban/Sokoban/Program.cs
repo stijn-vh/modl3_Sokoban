@@ -11,8 +11,8 @@ namespace Sokoban
         static void Main(string[] args)
         {
             Maze maze = new Maze();
-            Parser p = new Parser(maze, 3);
-            p.ReadFile(3);
+            Parser p = new Parser(maze, 4);
+            p.ReadFile(4);
             //Controller cont = new Controller(maze);
             //OutputView view = new OutputView();
             //InputView view2 = new InputView();

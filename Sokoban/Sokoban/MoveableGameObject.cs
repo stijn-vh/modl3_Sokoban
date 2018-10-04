@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace Sokoban
 {
-    public class GameObject
+    public class MoveableGameObject
     {
-        private char _char;
-        public GameObject _Up;
-        public GameObject _Right;
-        public GameObject _Down;
-        public GameObject _Left;
+        public MoveableGameObject _Up;
+        public MoveableGameObject _Right;
+        public MoveableGameObject _Down;
+        public MoveableGameObject _Left;
 
 
-        public GameObject(char _char, GameObject Up, GameObject Right, GameObject Down, GameObject Left)
+        public MoveableGameObject(char _char, MoveableGameObject Up, MoveableGameObject Right, MoveableGameObject Down, MoveableGameObject Left)
         {
             this._char = _char;
             this._Up = Up;
