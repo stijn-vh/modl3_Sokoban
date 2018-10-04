@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sokoban
 {
-    interface IGameObject
+    public interface IGameObject
     {
         IGameObject Up { get; set; }
         IGameObject Right { get; set; }
