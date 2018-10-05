@@ -11,14 +11,18 @@ namespace Sokoban
     {
         public IGameObject First { get => first; set => first = null; }
         private IGameObject first;
+        private IGameObject _player;
         public void Move()
         {
             var keySwitch = Console.ReadKey().Key;
-
+            var tempPlayer = _player;
+            System.Console.WriteLine("move");
             switch (keySwitch)
             {
                 case ConsoleKey.UpArrow:
-                    Console.WriteLine("Up");
+                    //_player = _player.Up;
+                    //tempPlayer = tempPlayer.Up;
+                    first = first.Right.Right.Down.Down.Down.Down;
                     break;
                 case ConsoleKey.DownArrow:
                     Console.WriteLine("Down");
@@ -55,6 +59,11 @@ namespace Sokoban
                     else
                     {
                         NewTile = levelArray[x, y];
+                        if(NewTile.GetType().Name == "Player") // Sla op waar de speler staat
+                        {
+                            _player = NewTile;
+                        }
+
                         if (y - 1 >= 0)
                         {
                             NewTile.Up = levelArray[x, y - 1];

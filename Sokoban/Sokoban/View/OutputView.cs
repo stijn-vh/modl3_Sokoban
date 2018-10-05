@@ -27,7 +27,7 @@ namespace Sokoban
         public void PrintMaze(IGameObject first)
         {
             IGameObject current = first;
-
+            //Console.Clear();
             while (current.Down != null) // Loop down the list
             {
                 while (current.Right != null) // Loop to the last item

@@ -12,14 +12,15 @@ namespace Sokoban
 
         private Maze _maze;
         private int _level;
-        public Parser(Maze maze, int level)
+        public Parser(int level)
         {
             _level = level;
-            _maze = maze;
         }
 
-        public void ReadFile()
+        public Maze ReadFile()
         {
+            _maze = new Maze();
+
             String LevelPath = @"Doolhof\doolhof" + _level + ".txt";
 
             String[] readString = System.IO.File.ReadAllLines(LevelPath);
@@ -70,6 +71,7 @@ namespace Sokoban
                 }
             }
             _maze.InitMaze(levelArray, width, height);
+            return _maze;
         }
     }
 }

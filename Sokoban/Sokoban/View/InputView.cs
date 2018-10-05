@@ -16,7 +16,7 @@ namespace Sokoban
             
         }
 
-        public void ReadLine()
+        public int ReadLevel()
         {
             Console.WriteLine("Kies een doolhof (1-4), s = stop");
             input2 = Console.ReadLine();
@@ -26,20 +26,21 @@ namespace Sokoban
                 if (input > 0 && input < 5)
                 {
                     Console.WriteLine("Jij wil doolhof " + input + " spelen");
+                    return input;
                 }
                 else
                 {
                     Console.WriteLine("Dat is geen geldige input!!");
-                    ReadLine();
+                    ReadLevel();
                 }
 
             }
             else
             {
                 Console.WriteLine("Dat is geen geldige input!!");
-                ReadLine();
+                ReadLevel();
             }
-
+            return 0;
         }
     }
 }

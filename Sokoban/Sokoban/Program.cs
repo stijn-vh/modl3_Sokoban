@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sokoban.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,14 +11,7 @@ namespace Sokoban
     {
         static void Main(string[] args)
         {
-            int level = 4;
-
-            Maze maze = new Maze();
-            Parser p = new Parser(maze, level);
-            Controller c = new Controller(maze);
-
-            p.ReadFile();
-            c.DrawMaze();
+            Game g = new Game();
         }
     }
 }

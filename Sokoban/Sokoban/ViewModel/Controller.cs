@@ -11,15 +11,19 @@ namespace Sokoban
         private OutputView _outputview;
         private InputView _inputView;
 
+        public Maze Maze { get => _maze; set => _maze = value; }
         private Maze _maze;
         private int countDestination;
 
-        public Controller(Maze maze)
+        public Controller()
         {
-            this._maze = maze;
-
             _outputview = new OutputView();
             _inputView = new InputView();
+        }
+
+        public int AskLevel()
+        {
+            return _inputView.ReadLevel();
         }
 
         public void DrawMaze()
@@ -27,26 +31,35 @@ namespace Sokoban
             _outputview.PrintMaze(_maze.First);
         }
 
-        //public void checkCollision()
+        public void GameLoop()
+        {
+            while(true)
+            {
+                _maze.Move();
+                DrawMaze();
+            }
+        }
+
+        //public void checkcollision()
         //{
-        //    if (!checkCratePushed())
+        //    if (!checkcratepushed())
         //    {
-        //        if (truck.position._Right.getCharacter() != '#')
+        //        if (truck.position._right.getcharacter() != '#')
         //        {
-        //            Console.WriteLine("You are good to go on x + 1!");
+        //            console.writeline("you are good to go on x + 1!");
         //        }
-        //        if (truck.position._Left.getCharacter() != '#')
+        //        if (truck.position._left.getcharacter() != '#')
         //        {
-        //            Console.WriteLine("You are good to go on x - 1!");
+        //            console.writeline("you are good to go on x - 1!");
 
         //        }
-        //        if (truck.position._Up.getCharacter() != '#')
+        //        if (truck.position._up.getcharacter() != '#')
         //        {
-        //            Console.WriteLine("You are good to go on y + 1!");
+        //            console.writeline("you are good to go on y + 1!");
         //        }
-        //        if (truck.position._Down.getCharacter() != '#')
+        //        if (truck.position._down.getcharacter() != '#')
         //        {
-        //            Console.WriteLine("You are good to go on y - 1!");
+        //            console.writeline("you are good to go on y - 1!");
 
         //        }
         //    }
@@ -86,7 +99,6 @@ namespace Sokoban
         //    {
         //        return true;
         //    }
-
         //    return false;
         //}
 

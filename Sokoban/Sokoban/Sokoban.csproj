@@ -53,6 +53,7 @@
     <Compile Include="Model\Crate.cs" />
     <Compile Include="Model\Player.cs" />
     <Compile Include="ViewModel\Controller.cs" />
+    <Compile Include="ViewModel\Game.cs" />
     <Compile Include="View\InputView.cs" />
     <Compile Include="Model\Maze.cs" />
     <Compile Include="View\OutputView.cs" />
