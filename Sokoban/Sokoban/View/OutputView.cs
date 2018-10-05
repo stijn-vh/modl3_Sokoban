@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sokoban.Interfaces;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,18 +25,19 @@ namespace Sokoban
             Console.WriteLine("----------------------------------------------------------");
         }
 
-        public void PrintMaze(IGameObject first)
+        public void PrintMaze(INonMoveableGameObject first)
         {
-            IGameObject current = first;
-            //Console.Clear();
+            Console.Clear();
+
+            INonMoveableGameObject current = first;
             while (current.Down != null) // Loop down the list
             {
                 while (current.Right != null) // Loop to the last item
                 {
-                    System.Console.Write(GetSymbol(current.GetType().Name));
+                    printSymbol(current);
                     current = current.Right;
                 }
-                System.Console.Write(GetSymbol(current.GetType().Name));
+                printSymbol(current);
                 while (current.Left != null) // Loop back to begin
                 {
                     current = current.Left;
@@ -45,13 +47,23 @@ namespace Sokoban
             }
             while (current.Right != null) // Loop to the last item
             {
-                System.Console.Write(GetSymbol(current.GetType().Name));
+                printSymbol(current);
                 current = current.Right;
             }
-            System.Console.Write(GetSymbol(current.GetType().Name));
-            System.Console.ReadLine();
+            printSymbol(current);
         }
 
+        public void printSymbol(INonMoveableGameObject current)
+        {
+            if(current.Player != null)
+            {
+                System.Console.Write(GetSymbol("Player"));
+            }
+            else
+            {
+                System.Console.Write(GetSymbol(current.GetType().Name));
+            }
+        }
         public char GetSymbol(String className)
         {
             char symbol = ' ';

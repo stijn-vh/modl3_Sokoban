@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sokoban
 {
-    interface IMoveableGameObject : IGameObject
+    public interface IMoveableGameObject : IGameObject
     {
         void Move();
         void ChechCollision(); // Check collision, als parameter richting meegeven?

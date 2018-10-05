@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Sokoban.Interfaces
 {
-    interface INonMoveableGameObject : IGameObject
+    public interface INonMoveableGameObject : IGameObject
     {
         Boolean IsActive { get; set; }
+        IMoveableGameObject Player { get; set; }
         void Active();
         void Deactivate();
     }

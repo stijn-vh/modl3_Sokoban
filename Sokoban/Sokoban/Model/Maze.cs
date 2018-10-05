@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sokoban.Interfaces;
+using Sokoban.Model;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +11,35 @@ namespace Sokoban
 {
     public class Maze
     {
-        public IGameObject First { get => first; set => first = null; }
-        private IGameObject first;
-        private IGameObject _player;
+        public INonMoveableGameObject First { get => first; set => first = null; }
+        private INonMoveableGameObject first;
+        public INonMoveableGameObject TileWithPlayer { get => tileWithPlayer; set => tileWithPlayer =  value; }
+        private INonMoveableGameObject tileWithPlayer;
         public void Move()
         {
             var keySwitch = Console.ReadKey().Key;
-            var tempPlayer = _player;
             System.Console.WriteLine("move");
             switch (keySwitch)
             {
                 case ConsoleKey.UpArrow:
-                    //_player = _player.Up;
-                    //tempPlayer = tempPlayer.Up;
-                    first = first.Right.Right.Down.Down.Down.Down;
+                    TileWithPlayer.Up.Player = TileWithPlayer.Player;
+                    TileWithPlayer.Player = null;
+                    TileWithPlayer = TileWithPlayer.Up;
                     break;
                 case ConsoleKey.DownArrow:
-                    Console.WriteLine("Down");
+                    TileWithPlayer.Down.Player = TileWithPlayer.Player;
+                    TileWithPlayer.Player = null;
+                    TileWithPlayer = TileWithPlayer.Down;
                     break;
                 case ConsoleKey.LeftArrow:
-                    Console.WriteLine("Left");
+                    TileWithPlayer.Left.Player = TileWithPlayer.Player;
+                    TileWithPlayer.Player = null;
+                    TileWithPlayer = TileWithPlayer.Left;
                     break;
                 case ConsoleKey.RightArrow:
-                    Console.WriteLine("Right");
+                    TileWithPlayer.Right.Player = TileWithPlayer.Player;
+                    TileWithPlayer.Player = null;
+                    TileWithPlayer = TileWithPlayer.Right;
                     break;
                 case ConsoleKey.S:
                     Console.WriteLine("SHUTDOWN");
@@ -43,9 +51,9 @@ namespace Sokoban
             }
         }
 
-        public void InitMaze(IGameObject[,] levelArray, int width, int height)
+        public void InitMaze(INonMoveableGameObject[,] levelArray, int width, int height)
         {
-            IGameObject NewTile = null;
+            INonMoveableGameObject NewTile = null;
             for (int y = 0; y < height; y++)
             {
                 for (int x = 0; x < width; x++)
@@ -59,9 +67,9 @@ namespace Sokoban
                     else
                     {
                         NewTile = levelArray[x, y];
-                        if(NewTile.GetType().Name == "Player") // Sla op waar de speler staat
+                        if(NewTile.Player != null)
                         {
-                            _player = NewTile;
+                            TileWithPlayer = NewTile;
                         }
 
                         if (y - 1 >= 0)

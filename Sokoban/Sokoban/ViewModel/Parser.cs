@@ -1,4 +1,5 @@
-﻿using Sokoban.Model;
+﻿using Sokoban.Interfaces;
+using Sokoban.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -35,14 +36,14 @@ namespace Sokoban
                 }
             }
 
-            IGameObject[,] levelArray = new IGameObject[width, height];
+            INonMoveableGameObject[,] levelArray = new INonMoveableGameObject[width, height];
             for(int y = 0; y < height; y++) // Full Multidimensional Array
             {
                 for(int x = 0; x < width; x++)
                 {
                     try
                     {
-                        IGameObject tempObject = new Empty();
+                        INonMoveableGameObject tempObject = null;
                         switch (readString[y].ElementAt(x))
                         {
                             case '.':
@@ -52,20 +53,25 @@ namespace Sokoban
                                 tempObject = new Wall();
                                 break;
                             case 'o':
-                                tempObject = new Crate();
+                                tempObject = new Floor(); // Plaats crate hierin
                                 break;
                             case 'x':
                                 tempObject = new Destination();
                                 break;
                             case '@':
-                                tempObject = new Player();
+                                tempObject = new Floor();
+                                tempObject.Player = new Player();
                                 break;
+                            default:
+                                tempObject = new Empty();
+                                break;
+
                         }
                         levelArray[x, y] = tempObject;
                     }
                     catch
                     {
-                        IGameObject tempObject = new Empty();
+                        INonMoveableGameObject tempObject = new Empty();
                         levelArray[x, y] = tempObject;
                     }
                 }

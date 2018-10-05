@@ -10,23 +10,28 @@ namespace Sokoban.Model
     class Floor : INonMoveableGameObject
     {
         public bool IsActive { get => isActive; set => isActive = false; }
-        public IGameObject Up { get => _Down; set => _Up = value; }
-        public IGameObject Right { get => _Right; set => _Right = value; }
-        public IGameObject Down { get => _Down; set => _Down = value; }
-        public IGameObject Left { get => _Left; set => _Left = value; }
+        public INonMoveableGameObject Up { get => _Up; set => _Up = value; }
+        public INonMoveableGameObject Right { get => _Right; set => _Right = value; }
+        public INonMoveableGameObject Down { get => _Down; set => _Down = value; }
+        public INonMoveableGameObject Left { get => _Left; set => _Left = value; }
+        public IMoveableGameObject Player { get => _player; set => _player = value; }
 
         private Boolean isActive;
-        private IGameObject _Up;
-        private IGameObject _Right;
-        private IGameObject _Down;
-        private IGameObject _Left;
+        private INonMoveableGameObject _Up;
+        private INonMoveableGameObject _Right;
+        private INonMoveableGameObject _Down;
+        private INonMoveableGameObject _Left;
+        private IMoveableGameObject _player;
+
         public void Active()
         {
-
+            throw new NotImplementedException();
         }
 
         public void Deactivate()
         {
+            throw new NotImplementedException();
         }
     }
 }
+

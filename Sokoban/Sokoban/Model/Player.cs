@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sokoban.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,16 +10,17 @@ namespace Sokoban
 {
     class Player : IMoveableGameObject
     {
-        public IGameObject Up { get => _Down; set => _Up = value; }
-        public IGameObject Right { get => _Right; set => _Right = value; }
-        public IGameObject Down { get => _Down; set => _Down = value; }
-        public IGameObject Left { get => _Left; set => _Left = value; }
+        public bool IsActive { get => isActive; set => isActive = false; }
+        public INonMoveableGameObject Up { get => _Down; set => _Up = value; }
+        public INonMoveableGameObject Right { get => _Right; set => _Right = value; }
+        public INonMoveableGameObject Down { get => _Down; set => _Down = value; }
+        public INonMoveableGameObject Left { get => _Left; set => _Left = value; }
 
         private Boolean isActive;
-        private IGameObject _Up;
-        private IGameObject _Right;
-        private IGameObject _Down;
-        private IGameObject _Left;
+        private INonMoveableGameObject _Up;
+        private INonMoveableGameObject _Right;
+        private INonMoveableGameObject _Down;
+        private INonMoveableGameObject _Left;
 
         public void Move()
         {
@@ -29,6 +31,7 @@ namespace Sokoban
         {
             throw new NotImplementedException();
         }
+
     }
 }
 
