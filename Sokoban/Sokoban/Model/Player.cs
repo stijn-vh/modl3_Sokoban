@@ -27,9 +27,29 @@ namespace Sokoban
             throw new NotImplementedException();
         }
 
-        public void ChechCollision()
+        public bool CheckCollision(int dir) // 1: up, 2: right, 3: down, 4: left
         {
-            throw new NotImplementedException();
+            INonMoveableGameObject tileOfDir = null;
+            switch (dir)
+            {
+                case 1:
+                    tileOfDir = _Up;
+                    break;
+                case 2:
+                    tileOfDir = _Right;
+                    break;
+                case 3:
+                    tileOfDir = _Down;
+                    break;
+                case 4:
+                    tileOfDir = _Left;
+                    break;
+            }
+            if(tileOfDir.GetType().Name == "Wall")
+            {
+                return false;
+            }
+            return true;
         }
 
     }

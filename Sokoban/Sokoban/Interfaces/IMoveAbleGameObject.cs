@@ -9,6 +9,6 @@ namespace Sokoban
     public interface IMoveableGameObject : IGameObject
     {
         void Move();
-        void ChechCollision(); // Check collision, als parameter richting meegeven?
+        bool CheckCollision(int dir); // Check collision, als parameter richting meegeven?
     }
 }

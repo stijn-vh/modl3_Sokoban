@@ -22,24 +22,36 @@ namespace Sokoban
             switch (keySwitch)
             {
                 case ConsoleKey.UpArrow:
-                    TileWithPlayer.Up.Player = TileWithPlayer.Player;
-                    TileWithPlayer.Player = null;
-                    TileWithPlayer = TileWithPlayer.Up;
+                    if (TileWithPlayer.Player.CheckCollision(1))
+                    {
+                        TileWithPlayer.Up.Player = TileWithPlayer.Player;
+                        TileWithPlayer.Player = null;
+                        TileWithPlayer = TileWithPlayer.Up;
+                    }
                     break;
                 case ConsoleKey.DownArrow:
-                    TileWithPlayer.Down.Player = TileWithPlayer.Player;
-                    TileWithPlayer.Player = null;
-                    TileWithPlayer = TileWithPlayer.Down;
+                    if (TileWithPlayer.Player.CheckCollision(2))
+                    {
+                        TileWithPlayer.Down.Player = TileWithPlayer.Player;
+                        TileWithPlayer.Player = null;
+                        TileWithPlayer = TileWithPlayer.Down;
+                    }
                     break;
                 case ConsoleKey.LeftArrow:
-                    TileWithPlayer.Left.Player = TileWithPlayer.Player;
-                    TileWithPlayer.Player = null;
-                    TileWithPlayer = TileWithPlayer.Left;
+                    if (TileWithPlayer.Player.CheckCollision(3))
+                    {
+                        TileWithPlayer.Left.Player = TileWithPlayer.Player;
+                        TileWithPlayer.Player = null;
+                        TileWithPlayer = TileWithPlayer.Left;
+                    }
                     break;
                 case ConsoleKey.RightArrow:
-                    TileWithPlayer.Right.Player = TileWithPlayer.Player;
-                    TileWithPlayer.Player = null;
-                    TileWithPlayer = TileWithPlayer.Right;
+                    if (TileWithPlayer.Player.CheckCollision(4))
+                    {
+                        TileWithPlayer.Right.Player = TileWithPlayer.Player;
+                        TileWithPlayer.Player = null;
+                        TileWithPlayer = TileWithPlayer.Right;
+                    }
                     break;
                 case ConsoleKey.S:
                     Console.WriteLine("SHUTDOWN");
