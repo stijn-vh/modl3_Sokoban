@@ -9,8 +9,11 @@ namespace Sokoban
 {
     public class OutputView
     {
-        public OutputView()
+        private bool finished;
+
+    public OutputView()
         {
+            finished = true;
             Console.WriteLine("----------------------------------------------------------");
             Console.WriteLine("| Welkom bij Sokoban!          |   Doel van het spel     |");
             Console.WriteLine("| Betekenis van de symbolen    |                         |");
@@ -25,19 +28,19 @@ namespace Sokoban
             Console.WriteLine("----------------------------------------------------------");
         }
 
-        public void PrintMaze(INonMoveableGameObject first)
+        public Boolean PrintMaze(INonMoveableGameObject first)
         {
             Console.Clear();
-
             INonMoveableGameObject current = first;
+            finished = true;
             while (current.Down != null) // Loop down the list
             {
                 while (current.Right != null) // Loop to the last item
                 {
-                    printSymbol(current);
+                    finished = printSymbol(current);
                     current = current.Right;
                 }
-                printSymbol(current);
+                finished = printSymbol(current);
                 while (current.Left != null) // Loop back to begin
                 {
                     current = current.Left;
@@ -47,22 +50,36 @@ namespace Sokoban
             }
             while (current.Right != null) // Loop to the last item
             {
-                printSymbol(current);
+                finished = printSymbol(current);
                 current = current.Right;
             }
-            printSymbol(current);
+            finished = printSymbol(current);
+            return finished;
         }
 
-        public void printSymbol(INonMoveableGameObject current)
+        public Boolean printSymbol(INonMoveableGameObject current)
         {
+            if(current.GetType().Name == "Destination" && !current.IsActive)
+            {
+                finished = false;
+            }
             if(current.Player != null)
             {
                 System.Console.Write(GetSymbol("Player"));
+            }
+            else if(current.GetType().Name == "Destination" && current.IsActive)
+            {
+                System.Console.Write("0");
+            }
+            else if (current.Crate != null)
+            {
+                System.Console.Write(GetSymbol("Crate"));
             }
             else
             {
                 System.Console.Write(GetSymbol(current.GetType().Name));
             }
+            return finished;
         }
         public char GetSymbol(String className)
         {
@@ -86,6 +103,14 @@ namespace Sokoban
                     break;
             }
             return symbol;
+        }
+
+        public void FinishedGame()
+        {
+            Console.Clear();
+            System.Console.WriteLine("You finished the Level, Congratz!");
+            System.Console.WriteLine("Press <Enter> to exit the game.");
+            Console.ReadLine();
         }
     }
 }

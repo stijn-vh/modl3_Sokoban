@@ -10,6 +10,7 @@ namespace Sokoban.Interfaces
     {
         Boolean IsActive { get; set; }
         IMoveableGameObject Player { get; set; }
+        IMoveableGameObject Crate { get; set; }
         void Active();
         void Deactivate();
     }

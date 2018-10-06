@@ -15,52 +15,13 @@ namespace Sokoban
         private INonMoveableGameObject first;
         public INonMoveableGameObject TileWithPlayer { get => tileWithPlayer; set => tileWithPlayer =  value; }
         private INonMoveableGameObject tileWithPlayer;
-        public void Move()
+
+        public void UpdatePlayerPosition()
         {
-            var keySwitch = Console.ReadKey().Key;
-            System.Console.WriteLine("move");
-            switch (keySwitch)
-            {
-                case ConsoleKey.UpArrow:
-                    if (TileWithPlayer.Player.CheckCollision(1))
-                    {
-                        TileWithPlayer.Up.Player = TileWithPlayer.Player;
-                        TileWithPlayer.Player = null;
-                        TileWithPlayer = TileWithPlayer.Up;
-                    }
-                    break;
-                case ConsoleKey.DownArrow:
-                    if (TileWithPlayer.Player.CheckCollision(2))
-                    {
-                        TileWithPlayer.Down.Player = TileWithPlayer.Player;
-                        TileWithPlayer.Player = null;
-                        TileWithPlayer = TileWithPlayer.Down;
-                    }
-                    break;
-                case ConsoleKey.LeftArrow:
-                    if (TileWithPlayer.Player.CheckCollision(3))
-                    {
-                        TileWithPlayer.Left.Player = TileWithPlayer.Player;
-                        TileWithPlayer.Player = null;
-                        TileWithPlayer = TileWithPlayer.Left;
-                    }
-                    break;
-                case ConsoleKey.RightArrow:
-                    if (TileWithPlayer.Player.CheckCollision(4))
-                    {
-                        TileWithPlayer.Right.Player = TileWithPlayer.Player;
-                        TileWithPlayer.Player = null;
-                        TileWithPlayer = TileWithPlayer.Right;
-                    }
-                    break;
-                case ConsoleKey.S:
-                    Console.WriteLine("SHUTDOWN");
-                    System.Threading.Thread.Sleep(1000);
-                    System.Environment.Exit(1);
-                    break;
-                default:
-                    break;
-            }
+            TileWithPlayer.Player.Up = TileWithPlayer.Up;
+            TileWithPlayer.Player.Right = TileWithPlayer.Right;
+            TileWithPlayer.Player.Down = TileWithPlayer.Down;
+            TileWithPlayer.Player.Left = TileWithPlayer.Left;
         }
 
         public void InitMaze(INonMoveableGameObject[,] levelArray, int width, int height)

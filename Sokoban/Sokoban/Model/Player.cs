@@ -45,8 +45,13 @@ namespace Sokoban
                     tileOfDir = _Left;
                     break;
             }
+            Console.WriteLine(tileOfDir.GetType().Name);
             if(tileOfDir.GetType().Name == "Wall")
             {
+                if(tileOfDir.Crate != null)
+                {
+
+                }
                 return false;
             }
             return true;

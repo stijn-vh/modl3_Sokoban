@@ -54,6 +54,7 @@ namespace Sokoban
                                 break;
                             case 'o':
                                 tempObject = new Floor(); // Plaats crate hierin
+                                tempObject.Crate = new Crate();
                                 break;
                             case 'x':
                                 tempObject = new Destination();
