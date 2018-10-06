@@ -43,11 +43,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IGameObject.cs" />
+    <Compile Include="Interfaces\IMoveableGameObject.cs" />
+    <Compile Include="Interfaces\INonMoveableGameObject.cs" />
+    <Compile Include="Model\Destination.cs" />
+    <Compile Include="Model\Empty.cs" />
+    <Compile Include="Model\Floor.cs" />
+    <Compile Include="Model\Wall.cs" />
+    <Compile Include="Model\Crate.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="ViewModel\Controller.cs" />
+    <Compile Include="ViewModel\Game.cs" />
+    <Compile Include="View\InputView.cs" />
+    <Compile Include="Model\Maze.cs" />
+    <Compile Include="View\OutputView.cs" />
+    <Compile Include="ViewModel\Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="DKD_sokoban.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
