@@ -1,17 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Sokoban.Controller">
-    <Position X="7.75" Y="3.25" Width="1.5" />
-    <AssociationLine Name="InputView" Type="Sokoban.InputView" ManuallyRouted="true">
-      <Path>
-        <Point X="8.469" Y="3.25" />
-        <Point X="8.469" Y="2.876" />
-        <Point X="8.992" Y="2.876" />
-        <Point X="8.992" Y="1.47" />
-        <Point X="9.25" Y="1.47" />
-      </Path>
-    </AssociationLine>
+    <Position X="5.75" Y="3" Width="1.5" />
     <TypeIdentifier>
+<<<<<<< HEAD
       <HashCode>gAAgAAABAAAIAAAAAQIAgAAAAABAAACAgAAEBCIAAAA=</HashCode>
       <FileName>ViewModel\Controller.cs</FileName>
     </TypeIdentifier>
@@ -19,104 +11,130 @@
       <Property Name="InputView" />
       <Property Name="OutputView" />
       <Property Name="Parser" />
+=======
+      <HashCode>gAAAAAABAAAIAAAAAQAAgAAAAABAAACAgAAABCIAAAA=</HashCode>
+      <FileName>ViewModel\Controller.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+>>>>>>> master
       <Property Name="Maze" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.OutputView">
-    <Position X="11.5" Y="0.5" Width="1.5" />
+    <Position X="7.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAQAAAAAAAEAAAAAoAAAAAAAAAAAAA=</HashCode>
       <FileName>View\OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.ViewModel.Game">
-    <Position X="3.75" Y="3.25" Width="1.5" />
+    <Position X="8" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ViewModel\Game.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Controller" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.Parser">
-    <Position X="4.75" Y="0.75" Width="1.5" />
+    <Position X="8" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAAAgQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ViewModel\Parser.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.InputView">
-    <Position X="9.25" Y="0.5" Width="1.5" />
+    <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>View\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
+<<<<<<< HEAD
   <Class Name="Sokoban.Crate">
     <Position X="10" Y="9" Width="1.5" />
+=======
+  <Class Name="Sokoban.Crate" Collapsed="true">
+    <Position X="11.5" Y="10.5" Width="1.5" />
+>>>>>>> master
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Crate.cs</FileName>
     </TypeIdentifier>
   </Class>
+<<<<<<< HEAD
   <Class Name="Sokoban.Model.Destination">
     <Position X="4.25" Y="8.25" Width="1.5" />
+=======
+  <Class Name="Sokoban.Model.Destination" Collapsed="true">
+    <Position X="0.75" Y="10.5" Width="1.5" />
+>>>>>>> master
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Destination.cs</FileName>
     </TypeIdentifier>
   </Class>
+<<<<<<< HEAD
   <Class Name="Sokoban.Model.Floor">
     <Position X="6.25" Y="9.25" Width="1.5" />
+=======
+  <Class Name="Sokoban.Model.Floor" Collapsed="true">
+    <Position X="7.75" Y="10.5" Width="1.5" />
+>>>>>>> master
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Floor.cs</FileName>
     </TypeIdentifier>
   </Class>
+<<<<<<< HEAD
   <Class Name="Sokoban.Model.Empty">
     <Position X="2.5" Y="9.25" Width="1.5" />
+=======
+  <Class Name="Sokoban.Model.Empty" Collapsed="true">
+    <Position X="6" Y="10.5" Width="1.5" />
+>>>>>>> master
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Empty.cs</FileName>
     </TypeIdentifier>
   </Class>
+<<<<<<< HEAD
   <Class Name="Sokoban.Player">
     <Position X="0.5" Y="8.5" Width="1.5" />
+=======
+  <Class Name="Sokoban.Player" Collapsed="true">
+    <Position X="2.5" Y="10.5" Width="1.5" />
+>>>>>>> master
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
+<<<<<<< HEAD
   <Class Name="Sokoban.Wall">
     <Position X="8.25" Y="8.25" Width="1.5" />
+=======
+  <Class Name="Sokoban.Wall" Collapsed="true">
+    <Position X="9.75" Y="10.5" Width="1.5" />
+>>>>>>> master
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Wall.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Maze">
-    <Position X="4.25" Y="4.5" Width="1.5" />
+    <Position X="5.75" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAZgAAAOAAAAAAAACAAQEAAACAQAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAYAAAAGAAAAAAAACAAAAAAACAAAAAAA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Crate" />
-      <Property Name="Empty" />
-      <Property Name="Wall" />
-      <Property Name="Floor" />
-      <Property Name="Destination" />
-      <Property Name="Player" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.Program">
-    <Position X="1.5" Y="2.25" Width="1.5" />
+    <Position X="12.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
+<<<<<<< HEAD
   <Class Name="Sokoban.Model.GameObject">
     <Position X="5.25" Y="12.75" Width="1.5" />
     <TypeIdentifier>
@@ -138,5 +156,7 @@
       <FileName>Model\NonMoveableGameObject.cs</FileName>
     </TypeIdentifier>
   </Class>
+=======
+>>>>>>> master
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

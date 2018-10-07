@@ -17,12 +17,5 @@ namespace Sokoban.ViewModel
             c.GameLoop();
         }
 
-        public Controller Controller
-        {
-            get => default(Controller);
-            set
-            {
-            }
-        }
     }
 }
