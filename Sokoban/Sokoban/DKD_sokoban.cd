@@ -16,10 +16,10 @@
       <FileName>ViewModel\Controller.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Property Name="Maze" />
       <Property Name="InputView" />
       <Property Name="OutputView" />
       <Property Name="Parser" />
-      <Property Name="Maze" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.OutputView">
