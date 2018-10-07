@@ -67,53 +67,5 @@ namespace Sokoban
                 }
             }
         }
-
-        internal Crate Crate
-        {
-            get => default(Crate);
-            set
-            {
-            }
-        }
-
-        internal Empty Empty
-        {
-            get => default(Empty);
-            set
-            {
-            }
-        }
-
-        internal Wall Wall
-        {
-            get => default(Wall);
-            set
-            {
-            }
-        }
-
-        internal Floor Floor
-        {
-            get => default(Floor);
-            set
-            {
-            }
-        }
-
-        internal Destination Destination
-        {
-            get => default(Destination);
-            set
-            {
-            }
-        }
-
-        internal Player Player
-        {
-            get => default(Player);
-            set
-            {
-            }
-        }
     }
 }
