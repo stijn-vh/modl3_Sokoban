@@ -12,20 +12,20 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>gAAgAAABAAAIAAAAAQIAgAAAAABAAAGAgAAEBCIAAAA=</HashCode>
+      <HashCode>gAAgAAABAAAIAAAAAQIAgAAAAABAAACAgAAEBCIAAAA=</HashCode>
       <FileName>ViewModel\Controller.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Maze" />
       <Property Name="InputView" />
       <Property Name="OutputView" />
       <Property Name="Parser" />
+      <Property Name="Maze" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.OutputView">
     <Position X="11.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAQAAAAAAAEAAAAAgAAAACAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAQAAAAAAAEAAAAAoAAAAAAAAAAAAA=</HashCode>
       <FileName>View\OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -53,53 +53,47 @@
       <FileName>View\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Sokoban.Crate" Collapsed="true">
+  <Class Name="Sokoban.Crate">
     <Position X="10" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQIAAIAAAAgAEAAAABAAAAAABACBCACAAAAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Crate.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Sokoban.Model.Destination" Collapsed="true">
+  <Class Name="Sokoban.Model.Destination">
     <Position X="4.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQIIAABAABgAEAAACBAAAAAABAAhCACAAQAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Destination.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Sokoban.Model.Floor" Collapsed="true">
+  <Class Name="Sokoban.Model.Floor">
     <Position X="6.25" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQIIAABAABgAEAAACBAAAAAABAAhCACAAQAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Floor.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Sokoban.Model.Empty" Collapsed="true">
+  <Class Name="Sokoban.Model.Empty">
     <Position X="2.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQIIAABAABgAEAAACBAAAAAABAAhCACAAQAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Empty.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Sokoban.Player" Collapsed="true">
+  <Class Name="Sokoban.Player">
     <Position X="0.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQIAAIAAAAgAEAAAABAAAAAABACBCACAAAAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Player.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Sokoban.Wall" Collapsed="true">
+  <Class Name="Sokoban.Wall">
     <Position X="8.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQIIAABAABgAEAAACBAAAAAABAAhCACAAQAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Wall.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Sokoban.Maze">
     <Position X="4.25" Y="4.5" Width="1.5" />
@@ -123,26 +117,26 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="Sokoban.IGameObject" Collapsed="true">
-    <Position X="5.75" Y="10.25" Width="1.5" />
+  <Class Name="Sokoban.Model.GameObject">
+    <Position X="5.25" Y="12.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
-      <FileName>Interfaces\IGameObject.cs</FileName>
+      <FileName>Model\GameObject.cs</FileName>
     </TypeIdentifier>
-  </Interface>
-  <Interface Name="Sokoban.IMoveableGameObject" Collapsed="true">
-    <Position X="7" Y="11.25" Width="1.5" />
+  </Class>
+  <Class Name="Sokoban.Model.MoveableGameObject">
+    <Position X="7.5" Y="11.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
-      <FileName>Interfaces\IMoveableGameObject.cs</FileName>
+      <HashCode>AAAAAQIAAAAAAAgAEAAAABAAAAAABAABCACAAAAAAAI=</HashCode>
+      <FileName>Model\MoveableGameObject.cs</FileName>
     </TypeIdentifier>
-  </Interface>
-  <Interface Name="Sokoban.Interfaces.INonMoveableGameObject" Collapsed="true">
-    <Position X="5" Y="11.25" Width="1.5" />
+  </Class>
+  <Class Name="Sokoban.Model.NonMoveableGameObject">
+    <Position X="3.25" Y="11.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAABAAEAAAAAAAAAAAAAAgAAAAAQAAAAA=</HashCode>
-      <FileName>Interfaces\INonMoveableGameObject.cs</FileName>
+      <HashCode>AAAAAQIIAAAAABgAEAAACBAAAAAABAABCACAAQAAAAI=</HashCode>
+      <FileName>Model\NonMoveableGameObject.cs</FileName>
     </TypeIdentifier>
-  </Interface>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
