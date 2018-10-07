@@ -43,12 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IGameObject.cs" />
-    <Compile Include="Interfaces\IMoveableGameObject.cs" />
-    <Compile Include="Interfaces\INonMoveableGameObject.cs" />
     <Compile Include="Model\Destination.cs" />
     <Compile Include="Model\Empty.cs" />
     <Compile Include="Model\Floor.cs" />
+    <Compile Include="Model\GameObject.cs" />
+    <Compile Include="Model\MoveableGameObject.cs" />
+    <Compile Include="Model\NonMoveableGameObject.cs" />
     <Compile Include="Model\Wall.cs" />
     <Compile Include="Model\Crate.cs" />
     <Compile Include="Model\Player.cs" />

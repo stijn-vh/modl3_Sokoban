@@ -1,5 +1,4 @@
-﻿using Sokoban.Interfaces;
-using Sokoban.Model;
+﻿using Sokoban.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,10 +10,10 @@ namespace Sokoban
 {
     public class Maze
     {
-        public INonMoveableGameObject First { get => first; set => first = null; }
-        private INonMoveableGameObject first;
-        public INonMoveableGameObject TileWithPlayer { get => tileWithPlayer; set => tileWithPlayer =  value; }
-        private INonMoveableGameObject tileWithPlayer;
+        public NonMoveableGameObject First { get => first; set => first = null; }
+        private NonMoveableGameObject first;
+        public NonMoveableGameObject TileWithPlayer { get => tileWithPlayer; set => tileWithPlayer =  value; }
+        private NonMoveableGameObject tileWithPlayer;
 
         public void UpdatePlayerPosition()
         {
@@ -24,9 +23,9 @@ namespace Sokoban
             TileWithPlayer.Player.Left = TileWithPlayer.Left;
         }
 
-        public void InitMaze(INonMoveableGameObject[,] levelArray, int width, int height)
+        public void InitMaze(NonMoveableGameObject[,] levelArray, int width, int height)
         {
-            INonMoveableGameObject NewTile = null;
+            NonMoveableGameObject NewTile = null;
             for (int y = 0; y < height; y++)
             {
                 for (int x = 0; x < width; x++)

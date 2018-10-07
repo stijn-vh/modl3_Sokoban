@@ -1,4 +1,4 @@
-﻿using Sokoban.Interfaces;
+﻿using Sokoban.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,7 +13,6 @@ namespace Sokoban
         private InputView _inputView;
         private bool _finished;
         private Maze _maze;
-        private int countDestination;
 
         public Controller()
         {
@@ -129,7 +128,7 @@ namespace Sokoban
 
         public bool CheckCollision(int dir) // 1: up, 2: right, 3: down, 4: left
         {
-            INonMoveableGameObject tileOfDir = GetTileByDir(dir, _maze.TileWithPlayer);
+            NonMoveableGameObject tileOfDir = GetTileByDir(dir, _maze.TileWithPlayer);
             if (tileOfDir.GetType().Name == "Wall")
             {
                 return false;
@@ -147,7 +146,7 @@ namespace Sokoban
             return true;
         }
 
-        public void MoveCrate(INonMoveableGameObject crateTile, int dir)
+        public void MoveCrate(NonMoveableGameObject crateTile, int dir)
         {
             switch (dir)
             {
@@ -171,9 +170,9 @@ namespace Sokoban
             }
         }
 
-        public INonMoveableGameObject GetTileByDir(int dir, INonMoveableGameObject current)
+        public NonMoveableGameObject GetTileByDir(int dir, NonMoveableGameObject current)
         {
-            INonMoveableGameObject tileOfDir = null;
+            NonMoveableGameObject tileOfDir = null;
             switch (dir)
             {
                 case 1:

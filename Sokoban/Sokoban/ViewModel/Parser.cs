@@ -1,5 +1,4 @@
-﻿using Sokoban.Interfaces;
-using Sokoban.Model;
+﻿using Sokoban.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -36,14 +35,14 @@ namespace Sokoban
                 }
             }
 
-            INonMoveableGameObject[,] levelArray = new INonMoveableGameObject[width, height];
+            NonMoveableGameObject[,] levelArray = new NonMoveableGameObject[width, height];
             for(int y = 0; y < height; y++) // Full Multidimensional Array
             {
                 for(int x = 0; x < width; x++)
                 {
                     try
                     {
-                        INonMoveableGameObject tempObject = null;
+                        NonMoveableGameObject tempObject = null;
                         switch (readString[y].ElementAt(x))
                         {
                             case '.':
@@ -72,7 +71,7 @@ namespace Sokoban
                     }
                     catch
                     {
-                        INonMoveableGameObject tempObject = new Empty();
+                        NonMoveableGameObject tempObject = new Empty();
                         levelArray[x, y] = tempObject;
                     }
                 }

@@ -1,4 +1,4 @@
-﻿using Sokoban.Interfaces;
+﻿using Sokoban.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -28,19 +28,19 @@ namespace Sokoban
             Console.WriteLine("----------------------------------------------------------");
         }
 
-        public Boolean PrintMaze(INonMoveableGameObject first)
+        public Boolean PrintMaze(NonMoveableGameObject first)
         {
             Console.Clear();
-            INonMoveableGameObject current = first;
+            NonMoveableGameObject current = first;
             finished = true;
             while (current.Down != null) // Loop down the list
             {
                 while (current.Right != null) // Loop to the last item
                 {
-                    finished = printSymbol(current);
+                    finished = PrintSymbol(current);
                     current = current.Right;
                 }
-                finished = printSymbol(current);
+                finished = PrintSymbol(current);
                 while (current.Left != null) // Loop back to begin
                 {
                     current = current.Left;
@@ -50,14 +50,14 @@ namespace Sokoban
             }
             while (current.Right != null) // Loop to the last item
             {
-                finished = printSymbol(current);
+                finished = PrintSymbol(current);
                 current = current.Right;
             }
-            finished = printSymbol(current);
+            finished = PrintSymbol(current);
             return finished;
         }
 
-        public Boolean printSymbol(INonMoveableGameObject current)
+        public Boolean PrintSymbol(NonMoveableGameObject current)
         {
             if(current.GetType().Name == "Destination" && !current.IsActive)
             {
