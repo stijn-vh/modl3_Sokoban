@@ -12,7 +12,6 @@ namespace Sokoban
         private OutputView _outputview;
         private InputView _inputView;
         private bool _finished;
-        public Maze Maze { get => _maze; set => _maze = value; }
         private Maze _maze;
         private int countDestination;
 
@@ -21,6 +20,38 @@ namespace Sokoban
             _finished = false;
             _outputview = new OutputView();
             _inputView = new InputView();
+        }
+
+        public InputView InputView
+        {
+            get => default(InputView);
+            set
+            {
+            }
+        }
+
+        public OutputView OutputView
+        {
+            get => default(OutputView);
+            set
+            {
+            }
+        }
+
+        public Parser Parser
+        {
+            get => default(Parser);
+            set
+            {
+            }
+        }
+
+        public Maze Maze
+        {
+            get => default(Maze);
+            set
+            {
+            }
         }
 
         public int AskLevel()

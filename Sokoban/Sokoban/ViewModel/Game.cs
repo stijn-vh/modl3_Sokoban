@@ -16,5 +16,13 @@ namespace Sokoban.ViewModel
             c.DrawMaze();
             c.GameLoop();
         }
+
+        public Controller Controller
+        {
+            get => default(Controller);
+            set
+            {
+            }
+        }
     }
 }
