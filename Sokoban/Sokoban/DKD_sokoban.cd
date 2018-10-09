@@ -47,6 +47,10 @@
       <FileName>View\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
+<<<<<<< HEAD
+  <Class Name="Sokoban.Crate">
+    <Position X="10" Y="9" Width="1.5" />
+=======
   <Class Name="Sokoban.Crate" Collapsed="true">
     <Position X="11.75" Y="13" Width="1.5" />
     <TypeIdentifier>
@@ -54,6 +58,10 @@
       <FileName>Model\Crate.cs</FileName>
     </TypeIdentifier>
   </Class>
+<<<<<<< HEAD
+  <Class Name="Sokoban.Model.Destination">
+    <Position X="4.25" Y="8.25" Width="1.5" />
+=======
   <Class Name="Sokoban.Model.Destination" Collapsed="true">
     <Position X="1.5" Y="13" Width="1.5" />
     <TypeIdentifier>
@@ -61,6 +69,10 @@
       <FileName>Model\Destination.cs</FileName>
     </TypeIdentifier>
   </Class>
+<<<<<<< HEAD
+  <Class Name="Sokoban.Model.Floor">
+    <Position X="6.25" Y="9.25" Width="1.5" />
+=======
   <Class Name="Sokoban.Model.Floor" Collapsed="true">
     <Position X="6.75" Y="13" Width="1.5" />
     <TypeIdentifier>
@@ -68,6 +80,10 @@
       <FileName>Model\Floor.cs</FileName>
     </TypeIdentifier>
   </Class>
+<<<<<<< HEAD
+  <Class Name="Sokoban.Model.Empty">
+    <Position X="2.5" Y="9.25" Width="1.5" />
+=======
   <Class Name="Sokoban.Model.Empty" Collapsed="true">
     <Position X="3.25" Y="13" Width="1.5" />
     <TypeIdentifier>
@@ -75,6 +91,10 @@
       <FileName>Model\Empty.cs</FileName>
     </TypeIdentifier>
   </Class>
+<<<<<<< HEAD
+  <Class Name="Sokoban.Player">
+    <Position X="0.5" Y="8.5" Width="1.5" />
+=======
   <Class Name="Sokoban.Player" Collapsed="true">
     <Position X="10" Y="13" Width="1.5" />
     <TypeIdentifier>
@@ -82,6 +102,10 @@
       <FileName>Model\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
+<<<<<<< HEAD
+  <Class Name="Sokoban.Wall">
+    <Position X="8.25" Y="8.25" Width="1.5" />
+=======
   <Class Name="Sokoban.Wall" Collapsed="true">
     <Position X="5" Y="13" Width="1.5" />
     <TypeIdentifier>
