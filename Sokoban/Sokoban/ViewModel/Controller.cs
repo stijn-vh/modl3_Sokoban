@@ -12,8 +12,8 @@ namespace Sokoban
         private OutputView _outputview;
         private InputView _inputView;
         private bool _finished;
-        public Maze Maze { get => _maze; set => _maze = value; }
         private Maze _maze;
+        public Maze Maze { get => _maze; set => _maze = value; }
 
         public Controller()
         {
@@ -37,19 +37,18 @@ namespace Sokoban
         {
             while (!_finished)
             {
-                WaitForInput();
+                ProcessInput(_inputView.WaitForInput());
                 DrawMaze();
             }
             _outputview.FinishedGame();
         }
 
-        public void WaitForInput()
+        public void ProcessInput(int keySwitch)
         {
-            var keySwitch = Console.ReadKey().Key;
-            System.Console.WriteLine("move");
+
             switch (keySwitch)
             {
-                case ConsoleKey.UpArrow:
+                case 38: // omhoog
                     if (CheckCollision(1))
                     {
                         _maze.TileWithPlayer.Up.Player = _maze.TileWithPlayer.Player;
@@ -58,7 +57,7 @@ namespace Sokoban
                         _maze.UpdatePlayerPosition();
                     }
                     break;
-                case ConsoleKey.RightArrow:
+                case 39:
                     if (CheckCollision(2))
                     {
                         _maze.TileWithPlayer.Right.Player = _maze.TileWithPlayer.Player;
@@ -67,7 +66,7 @@ namespace Sokoban
                         _maze.UpdatePlayerPosition();
                     }
                     break;
-                case ConsoleKey.DownArrow:
+                case 40:
                     if (CheckCollision(3))
                     {
                         _maze.TileWithPlayer.Down.Player = _maze.TileWithPlayer.Player;
@@ -76,7 +75,7 @@ namespace Sokoban
                         _maze.UpdatePlayerPosition();
                     }
                     break;
-                case ConsoleKey.LeftArrow:
+                case 37:
                     if (CheckCollision(4))
                     {
                         _maze.TileWithPlayer.Left.Player = _maze.TileWithPlayer.Player;
@@ -85,7 +84,7 @@ namespace Sokoban
                         _maze.UpdatePlayerPosition();
                     }
                     break;
-                case ConsoleKey.S:
+                case 83:
                     Console.WriteLine("SHUTDOWN");
                     System.Threading.Thread.Sleep(1000);
                     System.Environment.Exit(1);

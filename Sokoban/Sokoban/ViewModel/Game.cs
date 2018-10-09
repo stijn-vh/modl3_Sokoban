@@ -8,6 +8,7 @@ namespace Sokoban.ViewModel
 {
     class Game
     {
+
         public Game()
         {
             Controller c = new Controller();
@@ -17,5 +18,20 @@ namespace Sokoban.ViewModel
             c.GameLoop();
         }
 
+        public Parser Parser
+        {
+            get => default(Parser);
+            set
+            {
+            }
+        }
+
+        public Controller Controller
+        {
+            get => default(Controller);
+            set
+            {
+            }
+        }
     }
 }

@@ -67,5 +67,13 @@ namespace Sokoban
                 }
             }
         }
+
+        public GameObject GameObject
+        {
+            get => default(GameObject);
+            set
+            {
+            }
+        }
     }
 }

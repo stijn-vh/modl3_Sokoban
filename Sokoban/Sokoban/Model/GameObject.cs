@@ -8,9 +8,14 @@ namespace Sokoban.Model
 {
     public abstract class GameObject
     {
-        NonMoveableGameObject Up { get; set; }
-        NonMoveableGameObject Right { get; set; }
-        NonMoveableGameObject Down { get; set; }
-        NonMoveableGameObject Left { get; set; }
+        public NonMoveableGameObject Up { get => _Up; set => _Up = value; }
+        public NonMoveableGameObject Right { get => _Right; set => _Right = value; }
+        public NonMoveableGameObject Down { get => _Down; set => _Down = value; }
+        public NonMoveableGameObject Left { get => _Left; set => _Left = value; }
+
+        private NonMoveableGameObject _Up;
+        private NonMoveableGameObject _Right;
+        private NonMoveableGameObject _Down;
+        private NonMoveableGameObject _Left;
     }
 }

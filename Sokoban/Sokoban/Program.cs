@@ -9,6 +9,14 @@ namespace Sokoban
 {
     class Program
     {
+        internal Game Game
+        {
+            get => default(Game);
+            set
+            {
+            }
+        }
+
         static void Main(string[] args)
         {
             Game g = new Game();

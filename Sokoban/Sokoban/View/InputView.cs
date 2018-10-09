@@ -42,5 +42,11 @@ namespace Sokoban
             }
             return 0;
         }
+
+        public int WaitForInput()
+        {
+            return (int) Console.ReadKey().Key;
+           
+        }
     }
 }
